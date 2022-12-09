@@ -1,17 +1,20 @@
 # This workflow will install Python dependencies, run tests and lint with a single version of Python
 # For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-python
 
-name: Selenium on github action
+name: Selenium Github Action
 
 on:
-  schedule:
+  #schedule:
   # 定时运行 UTC 21:00(北京时间 13:00)
-  - cron: '0 21 * * *'
+  #- cron: '0 21 * * *'
+  # 允许用于在 `Actions` 标签页中手动运行工作流
   workflow_dispatch: 
   
 jobs:
   scrape:
+    # 执行作业所需的运行器 runner
     runs-on: ubuntu-latest
+    # steps 代表了作业中包含的一系列可被执行的任务
     steps:
       - name: Check out this repo
         uses: actions/checkout@v2
@@ -19,8 +22,8 @@ jobs:
         uses: actions/setup-python@v2
         with:
           python-version: '3.9'
-      - name: Installed package list
-        run: apt list --installed
+      #- name: Installed package list
+      #  run: apt list --installed
       - name: Remove Chrome
         run: sudo apt purge google-chrome-stable
       #- name: Remove default Chromium
