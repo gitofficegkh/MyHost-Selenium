@@ -27,9 +27,9 @@ jobs:
       #  run: sudo apt purge chromium-browser
       #- name: Install a new Chromium
       #  run: sudo apt install -y chromium-browser
-      - name: Install all necessary packages
-        run: pip install requests chromedriver-autoinstaller webdriver-manager selenium
-      - name: Run the scraping script
+      - name: Install all needs packages
+        run: pip install chromedriver-autoinstaller webdriver-manager selenium
+      - name: Run the script
         run: python main.py
       
     
