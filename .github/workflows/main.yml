@@ -17,10 +17,10 @@ jobs:
     # steps 代表了作业中包含的一系列可被执行的任务
     steps:
       - name: Check out this repo
-        # 使用市场插件拉取代码
-        uses: actions/checkout@v2
+        # 复用 actions/checkout@main action，拉取最新代码
+        uses: actions/checkout@main
       - name: Set up Python
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@main
         with:
           python-version: '3.9'
       - name: Remove Chrome
