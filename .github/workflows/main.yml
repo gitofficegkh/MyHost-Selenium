@@ -3,7 +3,10 @@
 
 name: Selenium on github action
 on:
-  workflow_dispatch:
+  watch:
+    types: started
+  schedule:
+    - cron: '0 21 * * *'
 jobs:
   scrape:
     runs-on: ubuntu-latest
