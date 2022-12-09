@@ -1,14 +1,15 @@
 
 from selenium import webdriver
-from webdriver_manager.chrome import ChromeDriverManager
-from webdriver_manager.core.utils import ChromeType
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.chrome.service import Service
 import chromedriver_autoinstaller
-chromedriver_autoinstaller.install()
-#driver = webdriver.Chrome(service=ChromiumService(ChromeDriverManager(chrome_type=ChromeType.CHROMIUM).install()))
 
-chrome_options = Options()
+# Check if the current version of chromedriver exists
+# and if it doesn't exist, download it automatically,
+# then add chromedriver to path
+chromedriver_autoinstaller.install()
+
+chrome_options = webdriver.ChromeOptions() 
 options = [
     "--headless",
     "--disable-gpu",
@@ -25,9 +26,6 @@ driver = webdriver.Chrome(options=chrome_options)
 driver.get('https://www.baidu.com')
 print(driver.title)
 
-driver.stop_client()
-driver.close()
-driver.quit()
 
 
 
