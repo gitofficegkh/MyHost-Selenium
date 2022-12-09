@@ -1,9 +1,7 @@
-#source for this code - https://github.com/adilshehzad786/Python-Selenium-GitHub-Actions/blob/main/scraper.py
-#https://github.com/MarketingPipeline/Python-Selenium-Action/blob/main/Selenium-Template.py
+
 from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
 from webdriver_manager.core.utils import ChromeType
-#from webdriver_manager.utils import ChromeType
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.chrome.service import Service
 import chromedriver_autoinstaller
@@ -14,7 +12,6 @@ chrome_options = Options()
 options = [
     "--headless",
     "--disable-gpu",
-    "--window-size=1920,1200",
     "--ignore-certificate-errors",
     "--disable-extensions",
     "--no-sandbox",
