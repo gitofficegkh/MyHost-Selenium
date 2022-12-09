@@ -17,9 +17,9 @@ jobs:
     # steps 代表了作业中包含的一系列可被执行的任务
     steps:
       - name: Check out this repo
-        uses: actions/checkout@v1
+        uses: actions/checkout@v3
       - name: Set up Python
-        uses: actions/setup-python@v1
+        uses: actions/setup-python@v2
         with:
           python-version: '3.9'
       - name: Remove Chrome
