@@ -23,7 +23,7 @@ for option in options:
 
 driver = webdriver.Chrome(options=chrome_options)
 
-driver.get('https://www.baidu.com')
+driver.get('https://www.yun316.net/')
 print(driver.title)
 
 
