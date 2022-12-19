@@ -20,7 +20,7 @@ options = [
 ]
 for option in options:
     chrome_options.add_argument(option)
-    chrome_options.add_argument("--proxy-server=https://182.151.173.11:4263")
+    # chrome_options.add_argument("--proxy-server=https://182.151.173.11:4263")
 
 driver = webdriver.Chrome(options=chrome_options)
 
